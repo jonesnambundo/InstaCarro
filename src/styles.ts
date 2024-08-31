@@ -3,9 +3,10 @@ import styled, { createGlobalStyle } from 'styled-components'
 export const cores = {
   preta: '#212121',
   pretoPassas: '#202020',
-  branca: '#F5F5F5',
+  brancaFumaca: '#F5F5F5',
   vermelho: '#F43735',
-  coral: '#F99A9933'
+  coral: '#F99A9933',
+  branca: '#FFFFFF'
 }
 
 export const GlobalCss = createGlobalStyle`
@@ -17,7 +18,7 @@ export const GlobalCss = createGlobalStyle`
 }
 
 body{
-  background-color: ${cores.branca};
+  background-color: ${cores.brancaFumaca};
   color: ${cores.preta};
   padding-top: 182px;
 }
