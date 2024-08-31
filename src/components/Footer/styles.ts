@@ -22,6 +22,6 @@ export const FooterText = styled.p`
   padding: 32px;
 
   &:first-child {
-    padding-top: 32px;
+    padding: 32px;
   }
 `
