@@ -101,7 +101,7 @@ const HomePage: React.FC = () => {
 
       <HeroGrid>
         {currentHeroes.map((hero) => (
-          <HeroCard key={hero.id}>
+          <HeroCard key={hero.id} data-testid="hero-card">
             <HeroImage
               src={`${hero.thumbnail.path}.${hero.thumbnail.extension}`}
               alt={hero.name}
