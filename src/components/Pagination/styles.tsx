@@ -6,6 +6,10 @@ export const PaginationControls = styled.div`
   margin-top: 20px;
   gap: 23px; /* Define a distância entre os botões */
   margin-bottom: 317px;
+
+  @media (max-width: 1024px) {
+    justify-content: center; /* Centraliza os controles de paginação em telas menores */
+  }
 `
 
 export const PaginationButton = styled.button<{ isActive: boolean }>`
