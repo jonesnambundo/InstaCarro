@@ -6,7 +6,8 @@ export const cores = {
   brancaFumaca: '#F5F5F5',
   vermelho: '#F43735',
   coral: '#F99A9933',
-  branca: '#FFFFFF'
+  branca: '#FFFFFF',
+  cinzaClaro: '#C5C5C5'
 }
 
 export const GlobalCss = createGlobalStyle`

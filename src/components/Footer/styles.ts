@@ -2,8 +2,9 @@ import styled from 'styled-components'
 import { cores } from '../../styles'
 
 export const FooterContainer = styled.div`
-  width: 1600px;
+  width: 100%;
   height: 82px;
+  bottom: 0px;
   position: absolute;
   top: 1718px;
   background-color: ${cores.pretoPassas};
@@ -11,7 +12,6 @@ export const FooterContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  padding-left: 215px;
 `
 export const FooterText = styled.p`
   width: 373px;
