@@ -74,3 +74,6 @@ instale as dependencias :
 
 ### Video Demo
 
+<p align="center">
+    <img width="100%" src="/assets/video/Interface-video">
+</p>
