@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 # Projeto Heróis da Marvel
 ## Visão Geral
 
@@ -10,14 +8,15 @@ Aplicação web que permite explorar heróis da Marvel, marcar favoritos e visua
 - Exibição de detalhes do herói com quadrinhos relacionados.
 - Gerenciamento de favoritos com persistência.
 - Paginação de heróis.
-- Foi adicionado um Loader  para mostrar o progresso de uma operação ou carregar conteúdos em uma aplicação.
-Para reduzir a percepção de tempo de espera ao fornecer um feedback visual de que algo está acontecendo, o que pode tornar a aplicação mais amigável e menos frustrante para o usuário.
 - Testes E2E com Cypress.
-- Responsividade para Mobiles e Tablet
+- Responsividade.
 
 ## HomePage
+
 Exibir uma lista de heróis da Marvel com imagem, nome e descrição. Permitir a busca por heróis e a filtragem por favoritos. Implementar a paginação para exibir heróis em páginas.
+
 ## CharacterProfilePage
+
 Exibir detalhes do herói selecionado, incluindo imagem, nome e descrição. Mostrar uma lista dos 5 quadrinhos do herói com imagem, título, data de lançamento, número de páginas e uma breve descrição.
 
 ## Favoritos
@@ -42,7 +41,7 @@ Gerenciar a lista de heróis favoritos usando o contexto React. Permitir adicion
 - Deploy na Vercel para visualizar o funcioanmento e efectuar os testes E2E.
 
 Link Vercei :
-
+- https://insta-carro-self.vercel.app/
 ## Tstes E2E
 
 Para Consultar os testes :
@@ -66,11 +65,13 @@ instale as dependencias :
 - npm i
 
 2. Inicie o projecto:
-- npm start
+## npm start
 
 ## Interface da WebPage
-![interface](https://github.com/user-attachments/assets/4020638a-e531-47f2-8b35-12dd07520b22)
+![interface](https://github.com/user-attachments/assets/df309a12-f081-4154-98b8-adea7ed58cef)
 
 ### Video Demo
-![interface](https://github.com/user-attachments/assets/a9ffc831-bf63-4e47-8c2b-a1d5eabf6498)
->>>>>>> 81a80d63a02b88eb5735a5fd292455f5c3c462f6
+
+<p align="center">
+    <img width="100%" src="/src/assets/video/interface.gif">
+</p>
