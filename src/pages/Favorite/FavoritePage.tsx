@@ -10,7 +10,7 @@ const FavoritesPage: React.FC = () => {
     <Container>
       <h1>Favorites</h1>
       {favorites.length === 0 ? (
-        <p>You have no favorite heroes.</p>
+        <p>Você não tem heróis favoritos.</p>
       ) : (
         <HeroGrid>
           {favorites.map((hero) => (

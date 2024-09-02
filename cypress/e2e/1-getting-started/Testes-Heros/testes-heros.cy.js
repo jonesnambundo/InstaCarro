@@ -10,11 +10,7 @@ describe('Verifica se o site está funcionando', () => {
     cy.get('body').should('be.visible')
   })
 
-  describe('Verifica se o site está funcionando', () => {
-    beforeEach(() => {
-      cy.visit('https://insta-carro-self.vercel.app/')
-    })
-
+  describe('Funcionalidades da página inicial', () => {
     it('Deve exibir a frase "EXPLORE O UNIVERSO E CRIE SUA EQUIPE"', () => {
       cy.contains('EXPLORE O UNIVERSO E CRIE SUA EQUIPE').should('be.visible')
     })
@@ -29,9 +25,8 @@ describe('Verifica se o site está funcionando', () => {
 
     it('Deve navegar para a página de favoritos ao clicar no botão de favoritos', () => {
       cy.get('span').contains('Somente favoritos').click()
-
       cy.url().should('include', '/favorites')
-      
-    cy.contains('h1', 'Seus Heróis Favoritos').should('exist')
+      cy.contains('h1', 'Seus Heróis Favoritos').should('exist')
+    })
   })
 })
