@@ -1,21 +1,19 @@
 import React from 'react'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
-import HomePage from './pages/Home'
-import FavoritesPage from './pages/Favorite/FavoritePage'
-import CharacterProfilePage from './pages/CharacterProfile/CharacterProfilePage'
-import Footer from './components/Footer'
+import HomePage from '../src/pages/Home'
+import FavoritesPage from '../src/pages/Favorite/FavoritePage'
+import { FavoritesProvider } from '../src/context/index'
 
-const AppRoutes: React.FC = () => {
+const App: React.FC = () => {
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/favorites" element={<FavoritesPage />} />
-        <Route path="/character/:id" element={<CharacterProfilePage />} />
-      </Routes>
-      <Footer />
-    </Router>
+    <FavoritesProvider>
+      <Router>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/favorites" element={<FavoritesPage />} />
+        </Routes>
+      </Router>
+    </FavoritesProvider>
   )
 }
-
-export default AppRoutes
+export default App

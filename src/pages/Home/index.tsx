@@ -20,6 +20,8 @@ import Pagination from '../../components/Pagination/index'
 import unfavoriteIcon from '../../assets/img/unfavorite.png'
 import favoriteIcon from '../../assets/img/favorito.png'
 import { Container } from '../../styles'
+import { useNavigate } from 'react-router-dom'
+import { useFavorites } from '../../context/index'
 
 interface Hero {
   id: number
@@ -32,11 +34,12 @@ interface Hero {
 
 const HomePage: React.FC = () => {
   const [heroes, setHeroes] = useState<Hero[]>([])
-  const [search, setSearch] = useState<string>('') // Keep it empty to start with
-  const [onlyFavorites, setOnlyFavorites] = useState<boolean>(false)
-
+  const [search, setSearch] = useState<string>('')
   const [currentPage, setCurrentPage] = useState(1)
-  const itemsPerPage = 8 // Number of heroes per page
+  const itemsPerPage = 8
+
+  const navigate = useNavigate()
+  const { favorites, toggleFavorite } = useFavorites()
 
   useEffect(() => {
     fetchHeroes()
@@ -44,7 +47,7 @@ const HomePage: React.FC = () => {
 
   useEffect(() => {
     if (!search) {
-      fetchHeroes('spider') // Fetch default heroes when the page loads and no search term is provided
+      fetchHeroes('spider')
     }
   }, [])
 
@@ -58,7 +61,6 @@ const HomePage: React.FC = () => {
     }
   }
 
-  // Pagination Logic
   const indexOfLastHero = currentPage * itemsPerPage
   const indexOfFirstHero = indexOfLastHero - itemsPerPage
   const currentHeroes = heroes.slice(indexOfFirstHero, indexOfLastHero)
@@ -89,12 +91,8 @@ const HomePage: React.FC = () => {
       <SearchBarContainer>
         <ListItem>
           <FoundHeroes>Encontrados {heroes.length} heróis</FoundHeroes>
-          <FavoritesToggle>
-            <img
-              src={unfavoriteIcon}
-              alt="Favorite Icon"
-              onClick={() => setOnlyFavorites(!onlyFavorites)}
-            />
+          <FavoritesToggle onClick={() => navigate('/favorites')}>
+            <img src={unfavoriteIcon} alt="Favorite Icon" />
             <span>Somente favoritos</span>
           </FavoritesToggle>
         </ListItem>
@@ -111,9 +109,13 @@ const HomePage: React.FC = () => {
             <h3>
               {hero.name}
               <FavoriteIcon2
-                src={favoriteIcon}
+                src={
+                  favorites.some((fav) => fav.id === hero.id)
+                    ? unfavoriteIcon
+                    : favoriteIcon
+                }
                 alt="Favorite Icon"
-                onClick={() => setOnlyFavorites(!onlyFavorites)}
+                onClick={() => toggleFavorite(hero)}
               />
             </h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
