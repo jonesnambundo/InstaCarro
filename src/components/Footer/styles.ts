@@ -1,27 +1,27 @@
 import styled from 'styled-components'
 import { cores } from '../../styles'
 
-export const FooterContainer = styled.div`
-  width: 100%;
-  height: 82px;
-  bottom: 0px;
-  position: absolute;
-  top: 1718px;
-  background-color: ${cores.pretoPassas};
-  color: ${cores.branca};
+export const FooterContainer = styled.footer`
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-`
-export const FooterText = styled.p`
-  width: 373px;
+  justify-content: space-between; /* Espaça os textos nas extremidades */
+  align-items: center; /* Alinha verticalmente os textos */
+  background-color: #f8f8f8;
+  padding: 10px;
+  border-top: 1px solid #ddd;
+  background-color: ${cores.pretoPassas};
+  padding: 32px;
   font-weight: 400;
   font-size: 20px;
-  line-height: 23.44px;
+  line-height: 24px;
+`
+export const FooterText = styled.p`
   margin: 0;
-  padding: 32px;
-
-  &:first-child {
-    padding: 32px;
-  }
+  font-size: 14px;
+  color: #555;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  color: ${cores.branca};
+  margin-left: 217px;
+  margin-right: 216px;
 `

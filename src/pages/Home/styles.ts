@@ -79,7 +79,7 @@ export const FavoritesToggle = styled.div`
   align-items: center;
 
   img {
-    margin-right: 5px;
+    margin-right: 20px;
     width: 30px;
     height: 26px;
     cursor: pointer;
@@ -137,9 +137,9 @@ export const HeroCard = styled.div`
 `
 
 export const FavoriteIcon2 = styled.img`
-  max-width: 22px; /* Ajuste a largura conforme necessário */
-  max-height: 19px; /* Ajuste a altura conforme necessário */
-  margin-left: auto; /* Se desejar adicionar espaço entre o nome e o ícone */
+  max-width: 22px;
+  max-height: 19px;
+  margin-left: auto;
   cursor: pointer;
   align-self: flex-start;
 `
