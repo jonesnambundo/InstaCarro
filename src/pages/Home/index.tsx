@@ -5,7 +5,6 @@ import {
   FavoritesToggle,
   HeroGrid,
   HeroCard,
-  FavoriteIcon,
   SearchIcon,
   SearchInputWrapper,
   SearchInput,
@@ -13,10 +12,12 @@ import {
   Subtitle,
   Title,
   ListItem,
-  FoundHeroes
+  FoundHeroes,
+  FavoriteIcon2
 } from './styles'
 import { FaSearch } from 'react-icons/fa'
 import Pagination from '../../components/Pagination/index'
+import unfavoriteIcon from '../../assets/img/unfavorite.png'
 import favoriteIcon from '../../assets/img/favorito.png'
 import { Container } from '../../styles'
 
@@ -90,7 +91,7 @@ const HomePage: React.FC = () => {
           <FoundHeroes>Encontrados {heroes.length} heróis</FoundHeroes>
           <FavoritesToggle>
             <img
-              src={favoriteIcon}
+              src={unfavoriteIcon}
               alt="Favorite Icon"
               onClick={() => setOnlyFavorites(!onlyFavorites)}
             />
@@ -103,15 +104,23 @@ const HomePage: React.FC = () => {
         {currentHeroes.map((hero) => (
           <HeroCard key={hero.id}>
             <img
+              className="hero-image"
               src={`${hero.thumbnail.path}.${hero.thumbnail.extension}`}
               alt={hero.name}
             />
-            <h3>{hero.name}</h3>
+            <h3>
+              {hero.name}
+              <FavoriteIcon2
+                src={favoriteIcon}
+                alt="Favorite Icon"
+                onClick={() => setOnlyFavorites(!onlyFavorites)}
+              />
+            </h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            <FavoriteIcon>❤️</FavoriteIcon>
           </HeroCard>
         ))}
       </HeroGrid>
+
       <Pagination
         currentPage={currentPage}
         itemsPerPage={itemsPerPage}

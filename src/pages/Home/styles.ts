@@ -103,6 +103,7 @@ export const HeroGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 35px;
+  margin-bottom: 45px;
 `
 
 export const HeroCard = styled.div`
@@ -115,53 +116,30 @@ export const HeroCard = styled.div`
     width: 238px;
     height: 169px;
     border-radius: 10px;
+    margin-bottom: 20px;
   }
 
   h3 {
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 18px;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 28px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 22px;
   }
 
   p {
-    font-size: 14px;
+    font-size: 16px;
     color: #777;
+    font-weight: 400;
   }
 `
 
-export const FavoriteIcon = styled.div`
-  margin-left: 64px; /* Distância entre o título e a imagem */
-  width: 22px; /* Ajuste o tamanho conforme necessário */
-  height: 20x; /* Ajuste o tamanho conforme necessário */
-`
-
-export const PaginationControls = styled.div`
-  display: flex;
-  justify-content: flex-end;
-  margin-top: 20px;
-`
-
-export const PaginationButton = styled.button<{ isActive: boolean }>`
-  background-color: ${(props) => (props.isActive ? '#000' : '#ccc')};
-  color: #fff;
-  border: none;
-  margin-left: 5px;
-  padding: 5px 10px;
+export const FavoriteIcon2 = styled.img`
+  max-width: 22px; /* Ajuste a largura conforme necessário */
+  max-height: 19px; /* Ajuste a altura conforme necessário */
+  margin-left: auto; /* Se desejar adicionar espaço entre o nome e o ícone */
   cursor: pointer;
-  border-radius: 5px;
-
-  &:hover {
-    background-color: ${(props) => (props.isActive ? '#333' : '#aaa')};
-  }
-
-  &:disabled {
-    background-color: #eee;
-    color: #999;
-    cursor: not-allowed;
-  }
-`
-
-export const PaginationImage = styled.img`
-  width: 24px;
-  height: 24px;
+  align-self: flex-start;
 `
