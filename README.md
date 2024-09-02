@@ -1,46 +1,73 @@
-# Getting Started with Create React App
+# Projeto Heróis da Marvel
+## Visão Geral
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Aplicação web que permite explorar heróis da Marvel, marcar favoritos e visualizar detalhes dos personagens. Utiliza a API da Marvel para obter dados e é construída com React, TypeScript e `styled-components`.
 
-## Available Scripts
+## Funcionalidades
+- Pesquisa de heróis por nome.
+- Exibição de detalhes do herói com quadrinhos relacionados.
+- Gerenciamento de favoritos com persistência.
+- Paginação de heróis.
+- Testes E2E com Cypress.
+- Responsividade.
 
-In the project directory, you can run:
+## HomePage
 
-### `npm start`
+Exibir uma lista de heróis da Marvel com imagem, nome e descrição. Permitir a busca por heróis e a filtragem por favoritos. Implementar a paginação para exibir heróis em páginas.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## CharacterProfilePage
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Exibir detalhes do herói selecionado, incluindo imagem, nome e descrição. Mostrar uma lista dos 5 quadrinhos do herói com imagem, título, data de lançamento, número de páginas e uma breve descrição.
 
-### `npm test`
+## Favoritos
+Exibir uma lista de heróis que foram favoritados pelo usuário. Os favoritos persistem mesmo apos recarregar a pagina.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Decisões Tecnicas
+FavoritesContext: para gerenciar a navegação entre páginas de heróis.
+Renderizar botões para a página anterior, próxima e páginas individuais.
+Uso do Context API para gerenciar o estado dos favoritos em FavoritesContext.
+Gerenciar a lista de heróis favoritos usando o contexto React. Permitir adicionar e remover heróis dos favoritos. Persistir os favoritos no localStorage.
 
-### `npm run build`
+## Tecnologias Utilizadas
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- React com TypeScript
+- Styled Components
+- Axios
+- Cypress
+- React Router
+- Context API
+- ESLint foca na qualidade e estilo do código, detectando problemas e aplicando regras de linting.
+- Prettier foca na formatação, ajustando o estilo do código de forma consistente.
+- Deploy na Vercel para visualizar o funcioanmento e efectuar os testes E2E.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Link Vercei :
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Tstes E2E
 
-### `npm run eject`
+Para Consultar os testes :
+npm cypress open
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Explicação do Teste:
+cy.get('span').contains('Somente favoritos').click(): Seleciona o botão de favoritos (baseado no texto "Somente favoritos") e simula um clique nele.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+cy.url().should('include', '/favorites'): Após o clique, verifica se a URL foi alterada para /favorites, indicando que a navegação foi bem-sucedida.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+cy.contains('h1', 'Seus Heróis Favoritos').should('exist'): Verifica se a página de favoritos foi carregada corretamente. Esse exemplo assume que a página de favoritos contém um título h1 com o texto "Seus Heróis Favoritos". Substitua isso com um seletor ou texto relevante presente na sua página de favoritos.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Obs: Vários outros testes podem ser feitos apenas uma exibição.
 
-## Learn More
+## Instalação
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+1. Faça um Fork e clone o Repositorio:
+git clone https://github.com/jonesnambundo/InstaCarro.git
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+instale as dependencias : npm i
+
+2. Inicie o projecto:
+npm start
+
+## Interface da WebPage
+
+
+### Video Demo
+
