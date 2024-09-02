@@ -70,5 +70,5 @@ npm start
 ### Video Demo
 
 <p align="center">
-    <img width="100%" src="/src//assets/video/Interface-video.mp4">
+    <img width="100%" src="/src//assets/video/interface.gif">
 </p>
