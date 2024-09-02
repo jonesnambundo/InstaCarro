@@ -8,15 +8,14 @@ Aplicação web que permite explorar heróis da Marvel, marcar favoritos e visua
 - Exibição de detalhes do herói com quadrinhos relacionados.
 - Gerenciamento de favoritos com persistência.
 - Paginação de heróis.
+- Foi adicionado um Loader  para mostrar o progresso de uma operação ou carregar conteúdos em uma aplicação.
+Para reduzir a percepção de tempo de espera ao fornecer um feedback visual de que algo está acontecendo, o que pode tornar a aplicação mais amigável e menos frustrante para o usuário.
 - Testes E2E com Cypress.
-- Responsividade.
+- Responsividade para Mobiles e Tablet
 
 ## HomePage
-
 Exibir uma lista de heróis da Marvel com imagem, nome e descrição. Permitir a busca por heróis e a filtragem por favoritos. Implementar a paginação para exibir heróis em páginas.
-
 ## CharacterProfilePage
-
 Exibir detalhes do herói selecionado, incluindo imagem, nome e descrição. Mostrar uma lista dos 5 quadrinhos do herói com imagem, título, data de lançamento, número de páginas e uma breve descrição.
 
 ## Favoritos
@@ -40,7 +39,7 @@ Gerenciar a lista de heróis favoritos usando o contexto React. Permitir adicion
 - Prettier foca na formatação, ajustando o estilo do código de forma consistente.
 - Deploy na Vercel para visualizar o funcioanmento e efectuar os testes E2E.
 
-Link Vercei :
+Link Vercei : https://insta-carro-self.vercel.app/
 
 ## Tstes E2E
 
@@ -66,8 +65,10 @@ instale as dependencias : npm i
 2. Inicie o projecto:
 npm start
 
-## Interface da WebPage
-
+## Interface da WebPage e MobilePAge
 
 ### Video Demo
 
+<p align="center">
+    <img width="100%" src="/src//assets/video/Interface-video.mp4">
+</p>
