@@ -5,6 +5,7 @@ import {
   FavoritesToggle,
   HeroGrid,
   HeroCard,
+  HeroImage, // New styled component for image
   SearchIcon,
   SearchInputWrapper,
   SearchInput,
@@ -101,10 +102,10 @@ const HomePage: React.FC = () => {
       <HeroGrid>
         {currentHeroes.map((hero) => (
           <HeroCard key={hero.id}>
-            <img
-              className="hero-image"
+            <HeroImage
               src={`${hero.thumbnail.path}.${hero.thumbnail.extension}`}
               alt={hero.name}
+              onClick={() => navigate(`/character/${hero.id}`)}
             />
             <h3>
               {hero.name}
@@ -115,7 +116,10 @@ const HomePage: React.FC = () => {
                     : favoriteIcon
                 }
                 alt="Favorite Icon"
-                onClick={() => toggleFavorite(hero)}
+                onClick={(e) => {
+                  e.stopPropagation() // Prevent navigation when clicking the favorite icon
+                  toggleFavorite(hero)
+                }}
               />
             </h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>

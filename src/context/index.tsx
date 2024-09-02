@@ -1,4 +1,10 @@
-import React, { createContext, useState, useEffect, useContext, ReactNode } from 'react'
+import React, {
+  createContext,
+  useState,
+  useEffect,
+  useContext,
+  ReactNode
+} from 'react'
 
 interface Hero {
   id: number
@@ -14,9 +20,13 @@ interface FavoritesContextProps {
   toggleFavorite: (hero: Hero) => void
 }
 
-const FavoritesContext = createContext<FavoritesContextProps | undefined>(undefined)
+const FavoritesContext = createContext<FavoritesContextProps | undefined>(
+  undefined
+)
 
-export const FavoritesProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
+export const FavoritesProvider: React.FC<{ children: ReactNode }> = ({
+  children
+}) => {
   const [favorites, setFavorites] = useState<Hero[]>(() => {
     // Load favorites from local storage on initial render
     const savedFavorites = localStorage.getItem('favorites')

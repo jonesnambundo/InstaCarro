@@ -111,6 +111,8 @@ export const HeroCard = styled.div`
   border: 1px solid #c6c6c6;
   padding: 19px 18px;
   text-align: left;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 
   img {
     width: 238px;
@@ -142,4 +144,14 @@ export const FavoriteIcon2 = styled.img`
   margin-left: auto;
   cursor: pointer;
   align-self: flex-start;
+`
+export const HeroImage = styled.img`
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: scale(1.05); /* Slightly enlarge the image on hover */
+  }
 `
