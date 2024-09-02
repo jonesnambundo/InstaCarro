@@ -39,12 +39,12 @@ Gerenciar a lista de heróis favoritos usando o contexto React. Permitir adicion
 - Prettier foca na formatação, ajustando o estilo do código de forma consistente.
 - Deploy na Vercel para visualizar o funcioanmento e efectuar os testes E2E.
 
-Link Vercei : https://insta-carro-self.vercel.app/
+Link Vercei :
 
 ## Tstes E2E
 
 Para Consultar os testes :
-npm cypress open
+- npm cypress open
 
 Explicação do Teste:
 cy.get('span').contains('Somente favoritos').click(): Seleciona o botão de favoritos (baseado no texto "Somente favoritos") e simula um clique nele.
@@ -58,17 +58,16 @@ Obs: Vários outros testes podem ser feitos apenas uma exibição.
 ## Instalação
 
 1. Faça um Fork e clone o Repositorio:
-git clone https://github.com/jonesnambundo/InstaCarro.git
+- git clone https://github.com/jonesnambundo/InstaCarro.git
 
-instale as dependencias : npm i
+instale as dependencias :
+- npm i
 
 2. Inicie o projecto:
-npm start
+## npm start
 
-## Interface da WebPage e MobilePAge
+## Interface da WebPage
+
 
 ### Video Demo
 
-<p align="center">
-    <img width="100%" src="/src//assets/video/interface.gif">
-</p>
