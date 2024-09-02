@@ -140,6 +140,12 @@ export const FavoritesToggle = styled.div`
     width: 30px;
     height: 26px;
     cursor: pointer;
+
+    @media (max-width: 768px) {
+      width: 18px;
+      height: 18px;
+      margin-right: 0px;
+    }
   }
 
   span {
@@ -170,7 +176,7 @@ export const FoundHeroes = styled.span`
   }
 `
 
-/**HeloLIST **Resposnive Cards */
+/**HEROLIST And Resposnive Cards */
 
 export const HeroGrid = styled.div`
   display: grid;
@@ -180,28 +186,19 @@ export const HeroGrid = styled.div`
   padding: 10px;
 
   @media (max-width: 468px) {
-    grid-template-columns: 1fr; /* 1 coluna para telas até 468px */
+    grid-template-columns: 1fr;
   }
 
   @media (min-width: 469px) and (max-width: 768px) {
-    grid-template-columns: repeat(
-      2,
-      1fr
-    ); /* 2 colunas para telas entre 469px e 768px */
+    grid-template-columns: repeat(2, 1fr);
   }
 
   @media (min-width: 769px) and (max-width: 1024px) {
-    grid-template-columns: repeat(
-      2,
-      1fr
-    ); /* 3 colunas para telas entre 769px e 1024px */
+    grid-template-columns: repeat(2, 1fr);
   }
 
   @media (min-width: 1025px) {
-    grid-template-columns: repeat(
-      4,
-      1fr
-    ); /* Ajuste progressivo para telas maiores */
+    grid-template-columns: repeat(4, 1fr);
   }
 `
 
