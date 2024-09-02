@@ -72,3 +72,6 @@ instale as dependencias :
 ### Video Demo
 ![interface](https://github.com/user-attachments/assets/a9ffc831-bf63-4e47-8c2b-a1d5eabf6498)
 
+<p align="center">
+    <img width="100%" src="/assets/video/Interface-video">
+</p>
