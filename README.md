@@ -45,7 +45,7 @@ Link Vercei :
 ## Tstes E2E
 
 Para Consultar os testes :
-npm cypress open
+- npm cypress open
 
 Explicação do Teste:
 cy.get('span').contains('Somente favoritos').click(): Seleciona o botão de favoritos (baseado no texto "Somente favoritos") e simula um clique nele.
@@ -61,7 +61,8 @@ Obs: Vários outros testes podem ser feitos apenas uma exibição.
 1. Faça um Fork e clone o Repositorio:
 git clone https://github.com/jonesnambundo/InstaCarro.git
 
-instale as dependencias : npm i
+instale as dependencias : 
+- npm i
 
 2. Inicie o projecto:
 ## npm start
