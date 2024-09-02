@@ -41,7 +41,7 @@ Gerenciar a lista de heróis favoritos usando o contexto React. Permitir adicion
 - Deploy na Vercel para visualizar o funcioanmento e efectuar os testes E2E.
 
 Link Vercei :
-
+- https://insta-carro-self.vercel.app/
 ## Tstes E2E
 
 Para Consultar os testes :
@@ -59,7 +59,7 @@ Obs: Vários outros testes podem ser feitos apenas uma exibição.
 ## Instalação
 
 1. Faça um Fork e clone o Repositorio:
-git clone https://github.com/jonesnambundo/InstaCarro.git
+- git clone https://github.com/jonesnambundo/InstaCarro.git
 
 instale as dependencias : 
 - npm i
