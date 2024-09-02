@@ -64,14 +64,10 @@ instale as dependencias :
 - npm i
 
 2. Inicie o projecto:
-## npm start
+- npm start
 
 ## Interface da WebPage
 ![interface](https://github.com/user-attachments/assets/4020638a-e531-47f2-8b35-12dd07520b22)
 
 ### Video Demo
 ![interface](https://github.com/user-attachments/assets/a9ffc831-bf63-4e47-8c2b-a1d5eabf6498)
-
-<p align="center">
-    <img width="100%" src="/assets/video/Interface-video">
-</p>
