@@ -64,7 +64,7 @@ git clone https://github.com/jonesnambundo/InstaCarro.git
 instale as dependencias : npm i
 
 2. Inicie o projecto:
-npm start
+## npm start
 
 ## Interface da WebPage
 
