@@ -5,7 +5,7 @@ import {
   FavoritesToggle,
   HeroGrid,
   HeroCard,
-  HeroImage, // New styled component for image
+  HeroImage,
   SearchIcon,
   SearchInputWrapper,
   SearchInput,
@@ -117,7 +117,7 @@ const HomePage: React.FC = () => {
                 }
                 alt="Favorite Icon"
                 onClick={(e) => {
-                  e.stopPropagation() // Prevent navigation when clicking the favorite icon
+                  e.stopPropagation()
                   toggleFavorite(hero)
                 }}
               />

@@ -51,8 +51,8 @@ export const SearchIcon = styled.div`
   left: 48px;
   top: 50%;
   transform: translateY(-50%);
-  color: ${cores.vermelho}; /* Cor do ícone */
-  font-size: 30px; /* Tamanho do ícone */
+  color: ${cores.vermelho};
+  font-size: 30px;
   width: 30px;
   height: 30.01px;
   display: flex;
@@ -152,6 +152,6 @@ export const HeroImage = styled.img`
   transition: transform 0.3s ease;
 
   &:hover {
-    transform: scale(1.05); /* Slightly enlarge the image on hover */
+    transform: scale(1.05);
   }
 `

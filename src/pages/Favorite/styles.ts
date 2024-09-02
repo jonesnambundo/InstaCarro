@@ -1,6 +1,5 @@
 import styled from 'styled-components'
 
-// Example of HeroCard and HeroGrid styling
 export const HeroGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
