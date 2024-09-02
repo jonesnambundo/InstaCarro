@@ -26,5 +26,12 @@ describe('Verifica se o site está funcionando', () => {
     it('Deve renderizar exatamente 8 heróis na página', () => {
       cy.get('[data-testid="hero-card"]').should('have.length', 8)
     })
+
+    it('Deve navegar para a página de favoritos ao clicar no botão de favoritos', () => {
+      cy.get('span').contains('Somente favoritos').click()
+
+      cy.url().should('include', '/favorites')
+      
+    cy.contains('h1', 'Seus Heróis Favoritos').should('exist')
   })
 })
