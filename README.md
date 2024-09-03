@@ -65,7 +65,7 @@ instale as dependencias :
 - npm i
 
 2. Inicie o projecto:
-## npm start
+- npm start
 
 ## Interface da WebPage
 ![interface](https://github.com/user-attachments/assets/df309a12-f081-4154-98b8-adea7ed58cef)
