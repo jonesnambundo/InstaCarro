@@ -14,35 +14,46 @@ export const ContentWrapper = styled.div`
 
 export const FooterContainer = styled.footer`
   display: flex;
-  justify-content: space-between; /* Espaça os textos nas extremidades */
-  align-items: center; /* Alinha verticalmente os textos */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background-color: ${cores.pretoPassas};
   padding: 32px;
   border-top: 1px solid #ddd;
   font-weight: 400;
-  font-size: 20px;
+  font-size: 12px;
   line-height: 24px;
 
-  @media (max-width: 1024px) {
-    flex-direction: column; /* Empilha os textos */
-    font-size: 10px;
+  @media (min-width: 1024px) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 20px;
+    padding: 32px 0;
   }
 `
+
 export const FooterText = styled.p`
   margin: 0;
-  font-size: 20px;
+  font-size: inherit;
   line-height: 24px;
   color: ${cores.branca};
-  margin-left: 350px;
-  margin-right: 260px;
+  font-weight: 400;
+  text-align: center;
 
   &:not(:last-child) {
-    margin-bottom: 10px; /* Adiciona espaçamento entre os textos quando empilhados */
+    margin-bottom: 10px;
   }
 
-  @media (max-width: 1024px) {
-    font-size: 10px;
-    margin-left: 0;
-    margin-right: 0;
+  @media (min-width: 1024px) {
+    margin-bottom: 0;
+    text-align: left;
+
+    &:first-child {
+      margin-left: 215px;
+    }
+    &:last-child {
+      margin-right: 214px;
+    }
   }
 `
